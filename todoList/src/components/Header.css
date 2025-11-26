@@ -1,0 +1,21 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.light .Header button{
+    background-color: #ffff;
+    color: #242424;
+    font-weight: 600;
+}
+.h1{
+    font-size: 40px;
+}
+.mode{
+    border: 1px solid #8f8989;
+    background-color: #242424;
+}
+.light .mode{
+    background-color: #ffff;
+}

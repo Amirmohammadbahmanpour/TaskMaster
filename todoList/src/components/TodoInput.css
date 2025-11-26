@@ -1,0 +1,83 @@
+.dark .TodoInput{
+    background-color: black;
+    padding: 9px 0px;
+    border: 1px solid #524e4e;
+    border-radius: 10px;
+    min-width: 620px;
+}
+.light .TodoInput{
+    background-color: #ffff;
+    padding: 9px 0px;
+    border-radius: 10px;
+    min-width: 620px;
+}
+.dark .input-text{
+    border: none;
+    background-color: black;
+    font-size: 20px;
+    outline: none;
+    margin-left: 10px;
+    
+}
+.dark .TodoInput form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.light .TodoInput form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.light .input-text{
+    border: none;
+    background-color: #ffff;
+    color: #524e4e;
+    font-size: 20px;
+    outline: none;
+    margin-left: 25px;
+}
+.dark .input-text{
+    margin-left: 25px;
+}
+.add-button{
+    background-color: #524e4e;
+}
+.light .add-button{
+    font-size: 18px;
+    background-color: #f3f3f3cc;
+    color: #524e4e;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+.dark .add-button{
+    font-size: 18px;
+    background-color: #201f1fcc;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+.dark .TodoInput .input-t{
+    background-color: #201f1fcc;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.light .TodoInput .input-t{
+    cursor: pointer;
+    background-color: #f3f3f3cc;
+    color: #524e4e;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+}
+.wrapper-input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.light input[type="date"]::-webkit-calendar-picker-indicator,
+.light input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

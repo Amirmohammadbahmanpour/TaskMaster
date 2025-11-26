@@ -1,0 +1,33 @@
+.light input[type="date"]::-webkit-calendar-picker-indicator,
+.light input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.arrow-img{
+    cursor: pointer;
+    position: fixed;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+}
+.done-task-item{
+    display: flex; 
+    align-items: baseline;
+    gap: 50px;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+}
+.done-task-item p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.doneTasks{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.title-items{
+    margin-left: 15px;
+    display: flex;
+
+    gap: 25px;
+}
