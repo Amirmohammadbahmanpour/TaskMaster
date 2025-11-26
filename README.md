@@ -86,7 +86,7 @@ All ideas and contributions are welcome!
 
 ## 👨‍💻 Creator
 
-**Amir Mohammad**  
+**AmirMohammad إBahmanpour**  
 Front-End Developer | Interested in Web, Cloud Computing & AI  
 Building step-by-step and learning every day 🙌
 ```
