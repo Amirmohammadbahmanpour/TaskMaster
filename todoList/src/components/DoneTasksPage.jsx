@@ -1,5 +1,8 @@
 import { Navigate, useNavigate } from 'react-router-dom'
 import './DoneTasksPage.css'
+import arrowDark from "../assets/dark-arrow.svg";
+import arrowLight from "../assets/light-arrow.svg";
+
 export function DoneTasksPage({setDoneTasks , doneTasks , setTasks , theme})
 {
     const navigate = useNavigate();
@@ -15,7 +18,7 @@ export function DoneTasksPage({setDoneTasks , doneTasks , setTasks , theme})
         
         <div className={theme}>
             <div className='DoneTasksPage'>
-            <img src={ theme === 'dark' ? "/src/assets/light-arrow.svg" : "/src/assets/dark-arrow.svg"} className="arrow-img" onClick={() => navigate("/")}/>
+            <img src={ theme === 'dark' ? arrowLight : arrowDark} className="arrow-img" onClick={() => navigate("/")}/>
             <div className="header">
                 <h1>done tasks</h1>
             </div>

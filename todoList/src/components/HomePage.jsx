@@ -4,6 +4,12 @@ import { TodoItem } from './TodoItem';
 import { Footer } from './Footer';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import lightHamburger from "../assets/light.svg";
+import darkHamburger from "../assets/dark.svg";
+import filterLight from "../assets/filter-light.svg";
+import filterDark from "../assets/filter-dark.svg";
+import closeLight from "../assets/light-close.svg";
+import closeDark from "../assets/dark-close.svg";
 import './HomePage.css';
 
 
@@ -43,12 +49,12 @@ export function HomePage({toggleTheme , theme , doneTasks , setDoneTasks , setTa
 
     return (
         <div className={theme}>
-            <img onClick={() => setIsOpen(!isOpen)} className='hamburger' src={ theme === 'dark'? "/src/assets/light.svg" : "/src/assets/dark.svg"} alt="" />
+            <img onClick={() => setIsOpen(!isOpen)} className='hamburger' src={ theme === 'dark'? lightHamburger : darkHamburger} alt="" />
             <div className={`sidebar ${isOpen ? 'open' : ''}`}>
                 {isOpen && (
                 <div className='top-side'> 
                 <h2>Todo List</h2>
-                <img onClick={() => {setIsOpen(false)}} src={ theme === 'dark' ? "/src/assets/light-close.svg" : "/src/assets/dark-close.svg"} alt="" className='close-button' />
+                <img onClick={() => {setIsOpen(false)}} src={ theme === 'dark' ? closeLight : closeDark} alt="" className='close-button' />
                 </div>
             )}
             <div className='wrap-items'>
@@ -57,7 +63,8 @@ export function HomePage({toggleTheme , theme , doneTasks , setDoneTasks , setTa
                     <p>Persian</p>
                     <label className='switch'>
                         <input type="checkbox" 
-                        onChange={() => setLanguage(prev => prev === 'en' ? 'fa' : 'en')} 
+                        onChange={() => 
+                        setLanguage(prev => prev === 'en' ? 'fa' : 'en')} 
                         checked={language === 'fa'}/>
                         <span className='slider'></span>
                     </label>
@@ -74,7 +81,7 @@ export function HomePage({toggleTheme , theme , doneTasks , setDoneTasks , setTa
                         <h3>Time</h3>
                     </div>
                     <div className='filter-con'>
-                    <img src={`/src/assets/filter-${ theme === 'dark' ? 'light' : 'dark'}.svg`} alt="" className='filter-img' onClick={() => setIsFilterOpen(!isFilterOpen)}/>
+                    <img src={ theme === 'dark'? filterLight : filterDark} alt="" className='filter-img' onClick={() => setIsFilterOpen(!isFilterOpen)}/>
                     {isFilterOpen ?
                         <div className='con-date-filter'>
                             <div className='top-fil'>
